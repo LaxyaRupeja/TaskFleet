@@ -96,10 +96,12 @@
           <p class="truncate text-base">{{ task.description }}</p>
           <div class="flex items-center gap-2">
             <p class="flex gap-1 items-center">
-              <span
-                class="bg-blue-500 rounded-[50%] text-center h-15 w-[40px] p-2 text-white font-semibold"
-                >{{ task.assignedTo.username[0] }}</span
-              >{{ task.assignedTo.username }}
+              <img
+                class="w-10 h-10 rounded-full"
+                src="{{ task.assignedTo.userProfile }}"
+                alt="Rounded avatar"
+              />
+              {{ task.assignedTo.username }}
             </p>
             <p>{{ task.deadline | date }}</p>
           </div>
