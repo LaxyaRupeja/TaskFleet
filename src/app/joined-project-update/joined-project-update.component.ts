@@ -30,7 +30,7 @@ export class JoinedProjectUpdateComponent implements OnInit {
       this.taskId = params["taskId"];
       this.projectId = params["projectId"];
       this.httpClient
-        .get(`http://localhost:8080/tasks/${this.taskId}`)
+        .get(`https://transparent-potent-typhoon.glitch.me/tasks/${this.taskId}`)
         .subscribe((response: any) => {
           const isoDate = response.task.deadline;
           const date = new Date(isoDate);
